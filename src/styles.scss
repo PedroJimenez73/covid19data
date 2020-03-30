@@ -1,1 +1,182 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cairo&display=swap');
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none; 
+    color: inherit; 
+    cursor: pointer;
+}
+
+button {
+    background-color:  transparent; 
+    color: inherit; 
+    border-width: 0; 
+    padding: 0; 
+    cursor: pointer;
+}
+
+input::-moz-focus-inner {
+    border:0; 
+    padding:0; 
+    margin:0;
+}
+
+ul, 
+ol {
+    list-style:none;
+}
+
+html {
+    -webkit-user-select: none; /* Chrome/Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+    
+    /* Rules below not implemented in browsers yet */
+    -o-user-select: none;
+    user-select: none;
+    font-size: 100%;
+}
+
+@media (min-width: 1440px) {
+    html {
+        font-size: 110%; 
+    }
+}
+
+@media (max-width: 440px) {
+    html {
+        font-size: 90%; 
+    }
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #67666e;
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: hsl(191, 100%, 28%);
+    margin-bottom: 0.5em;
+    font-family: 'Cairo', sans-serif;
+
+    span {
+        font-size: 1rem;
+        color: #67666e;
+    }
+}
+
+p.legend {
+    text-align: center;
+    font-size: 0.8rem;
+    margin: 1rem 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 1rem);
+    max-width: 440px;
+    padding: 1em 0 0;
+    margin: 0 auto;
+
+    h1 {
+        margin-bottom: 0;
+        font-size: 1.7rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+    }
+
+    img {
+        height: 40px;
+        width: auto;
+        margin-right: 0.5rem;
+    }
+}
+
+.current-data-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+
+    h1 {
+        margin-bottom: 0;
+    }
+
+    p {
+        display: flex;
+        align-items: center;
+
+        img {
+            height: 14px;
+            width: auto;
+            margin-right: 5px;
+        }
+    }
+}
+
+.current-data {
+    margin: 1rem 0;
+
+    p {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1rem;
+        color: #007791;
+        margin-bottom: 0.5rem;
+
+        span {
+            font-size: 1.4rem;
+            color: #67666e;
+        }
+    }
+
+    p.source {
+            font-size: 0.8rem;
+            color: #007791;
+    }
+
+}
+
+.card {
+    border-radius: 0.3rem;
+    box-shadow: 1px 1px 4px rgb(205, 205, 205);
+    width: calc(100% - 1rem);
+    max-width: 440px;
+    padding: 1em;
+    margin: 2em auto;
+
+    &.current {
+        box-shadow: none;
+        margin: 0 auto 2em;
+    }
+}
+
+footer {
+    background-color: rgb(41, 41, 41);
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    padding: 1em 0;
+    font-family: 'Cairo', sans-serif;
+
+    img {
+        height: 20px;
+        width: auto;
+        margin-right: 0.5rem;
+    }
+}

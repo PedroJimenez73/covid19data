@@ -1,0 +1,13 @@
+<div style="display: block;">
+    <h1>{{title}} <span>{{subtitle}}</span></h1>
+    <canvas baseChart width="400" height="400"
+        [datasets]="lineChartData"
+        [labels]="lineChartLabels"
+        [options]="lineChartOptions"
+        [colors]="lineChartColors"
+        [legend]="lineChartLegend"
+        [chartType]="lineChartType"
+        [plugins]="lineChartPlugins">
+    </canvas>
+    <p class="legend">10 últimos días</p>
+</div>

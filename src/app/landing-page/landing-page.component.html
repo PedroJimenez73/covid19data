@@ -1,0 +1,48 @@
+<header>
+    <h1>COVID-19 INFO</h1>
+    <p> <img src="assets/espana.svg" alt="logo"> España</p>
+</header>
+<div class="card current">
+    <div class="current-data-title">
+        <h1>Situación actual</h1>
+        <p> <img src="assets/calendar.svg" alt="calendar">  {{currentData?.updated | date: 'dd/MM/yy HH:mm'}}</p>
+    </div>
+    <hr>
+    <div class="current-data">
+        <p>CONTAGIOS CONFIRMADOS <span>{{currentData?.cases | locale}}</span></p>
+        <p>FALLECIDOS <span>{{currentData?.deaths | locale}}</span></p>
+        <p>RECUPERADOS <span>{{currentData?.recovered | locale}}</span></p>
+        <p>ACTIVOS <span>{{currentData?.active | locale}}</span></p>
+        <p>CRÍTICOS <span>{{currentData?.critical | locale}}</span></p>
+        <p class="source">Data Source: Johns Hopkins University & Medicine</p>
+    </div>
+</div>
+<div class="card">
+    <app-line [title]="'Confirmados'" 
+            [subtitle]="'INCREMENTO DIARIO'"
+            [color]="'rgb(196, 195, 100, 0.4)'"
+            [dates]="dates" 
+            [dataSet]="confirmedDaily"></app-line>
+</div>
+<div class="card">
+    <app-line [title]="'Confirmados'" 
+            [subtitle]="'TOTAL'"
+            [color]="'rgb(196, 195, 100, 0.4)'"
+            [dates]="dates" 
+            [dataSet]="confirmed"></app-line>
+</div>
+<div class="card">
+    <app-line [title]="'Fallecidos'" 
+            [subtitle]="'INCREMENTO DIARIO'" 
+            [color]="'rgba(0, 117, 143, 0.4)'"
+            [dates]="dates" 
+            [dataSet]="deathsDaily"></app-line>
+</div>
+<div class="card">
+    <app-line [title]="'Fallecidos'" 
+            [subtitle]="'TOTAL'" 
+            [color]="'rgba(0, 117, 143, 0.4)'"
+            [dates]="dates" 
+            [dataSet]="deaths"></app-line>
+</div>
+<footer> <img src="assets/github.svg" alt="github"> Pedro Jiménez</footer>
